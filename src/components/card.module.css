@@ -34,14 +34,6 @@
 	max-height: 100px;
 }
 
-#club-card {
-	background-color: #B8E2F2;
-}
-
-#fin-card {
-	background-color: #F6C8B4;
-}
-
 .postcard {
 	position: fixed;
 	height: 350px;
@@ -57,9 +49,17 @@
 	z-index: 1;
 }
 
+.covercard {
+	background-color: #B8E2F2;
+}
+
 .headercard {
 	background-color: #C1e8e9;
 	text-align: center;
+}
+
+.fincard {
+	background-color: #F6C8B4;
 }
 
 

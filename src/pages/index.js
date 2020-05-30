@@ -1,34 +1,25 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import favicon from '../images/favicon.ico'
 
 import styles from "./index.module.css"
 
 import Background from "../components/background.js"
-import Card, { HeaderCard, ContentCard} from "../components/card.js"
+import FindCard from "../components/card.js"
 import { Cards } from "../data/cards.js"
 
 const IndexPage = () => (<Index />)
-
-function FindCard(card) {
-	switch (card.type) {
-		case 'content':
-			return <ContentCard card={card}/>
-		case 'header':
-			return <HeaderCard card={card}/>
-		default:
-			return <Card card={card}/>
-	}
-}
 
 class Index extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { winWidth: 0, winHeight: 0 };
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
 		this.jumpHeight = 150;
 		this.rotateRange = 50;
-		this.scrollSpeed = 150;
-		this.scrollFreq = this.scrollSpeed * Math.PI;
-		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+		this.scrollFreq = window.innerHeight;
+		this.scrollSpeed = this.scrollFreq / Math.PI;
 	}
 
 	componentDidMount() {
@@ -43,6 +34,8 @@ class Index extends React.Component {
 
 	updateWindowDimensions() {
 		this.setState({ winWidth: window.innerWidth, winHeight: window.innerHeight });
+		this.scrollFreq = window.innerHeight;
+		this.scrollSpeed = this.scrollFreq / Math.PI;
 	}
 
 	handleScroll  = (event) => {
@@ -89,13 +82,11 @@ class Index extends React.Component {
 				<Helmet>
 					<meta charSet="utf-8" />
 					<title>Danny Chu</title>
+					<link rel="icon" href={favicon} />
 				</Helmet>
 				
 				<div id="background" className={styles.background}>
-					{Cards.map((card) => (<Background/>))}
-				</div>
-
-				<div>
+					{Cards.map((card) => (<Background key={card.id}/>))}
 					{Cards.map((card) => (FindCard(card))).reverse()}
 				</div>
 				

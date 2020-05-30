@@ -2,7 +2,7 @@ import React from "react"
 
 import styles from "../components/background.module.css"
 
-class MessageBoard extends React.Component {
+class Background extends React.Component {
 
 	render() {
 		return (
@@ -11,4 +11,4 @@ class MessageBoard extends React.Component {
 	}
 }
 
-export default MessageBoard
+export default Background
