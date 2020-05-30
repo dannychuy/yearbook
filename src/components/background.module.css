@@ -1,0 +1,7 @@
+.poster {
+	height: 471px;
+	/*box-shadow: 0 0 5px 0 gray;*/
+	scroll-snap-stop: always;
+	scroll-snap-align: start;
+	z-index: 10;
+}

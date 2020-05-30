@@ -1,0 +1,10 @@
+body {
+	background-color: #F0F0F0;
+	font-family: 'Source Code Pro', monospace;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

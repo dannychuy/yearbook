@@ -1,0 +1,9 @@
+.background {
+
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(471px);
+	scroll-snap-type: y mandatory;
+
+	height: 100vh;
+	overflow: scroll;
+}
