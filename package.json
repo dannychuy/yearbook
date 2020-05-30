@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-yearbook",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Yearbook in the frame of postcards",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Danny Chu",
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.21.37",
@@ -33,11 +33,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dannychuy/yearbook"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
